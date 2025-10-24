@@ -1,6 +1,6 @@
 const button = document.querySelector("button")
 button.addEventListener("click", sendUser)
-const main = document.querySelector("main")
+
 
 function sendUser(event) {
     event.preventDefault()
@@ -24,18 +24,3 @@ function sendUser(event) {
 
 
 
-async function buscarUsuarios() {
-    const users = await fetch("")
-
-    //apagar section html
-
-    users.map(user => {
-        main.innerHTML += `
-        <section>
-            <h3>Nome: ${user.name}</h3>
-            <p>Idade: ${user.age} anos</p>
-            <p>Email: ${user.email}</p>
-        </section>
-        `
-    })
-}
